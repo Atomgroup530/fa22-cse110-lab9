@@ -137,6 +137,68 @@
     errorBtns[7].addEventListener('click', () => {
       console.dirxml(document.head);
     });
+    function groupstart() {
+      const label = 'Adolescent Irradiated Espionage Tortoises';
+      console.group(label);
+      console.info('Leo');
+      console.info('Mike');
+      console.info('Don');
+      console.info('Raph');
+    }
+    // Console Group Start
+    errorBtns[8].addEventListener('click', () => {
+      groupstart();
+    });
+    // Console Group End
+    errorBtns[9].addEventListener('click', () => {
+      const label = 'Adolescent Irradiated Espionage Tortoises';
+      console.groupEnd(label);
+    });
+    // Console Table
+    errorBtns[10].addEventListener('click', () => {
+      var people = [
+      {
+        first: 'René',
+        last: 'Magritte',
+      },
+      {
+        first: 'Chaim',
+        last: 'Soutine',
+        birthday: '18930113',
+      },
+      {
+        first: 'Henri',
+        last: 'Matisse',
+      }
+      ];
+      console.table(people);
+    });
+    function startTimer(){
+      console.time();
+    }
+    function endTimer(){
+      console.timeEnd();
+    }
+    // Start Timer
+    errorBtns[11].addEventListener('click', () => {
+      startTimer();
+    });
+    // End Timer
+    errorBtns[12].addEventListener('click', () => {
+      endTimer();
+    });
+    // Console Trace
+    errorBtns[13].addEventListener('click', () => {
+      const first = () => { second(); };
+      const second = () => { third(); };
+      const third = () => { fourth(); };
+      const fourth = () => { console.trace(); };
+      first();
+    });
+    // Trigger a Global Error
+    errorBtns[14].addEventListener('click', () => {
+      console.log(undefinedVariable);
+    });
   </script>
 </body>
 
